@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>瀑布流首页</title>
+<link href="css/web.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+
+<body>
+<div style="" class="Header">
+    <div class="Header-inner">  
+      <h1 class="logo"><a href="/">森果</a></h1>
+      <div class="left">
+        <ul>
+          <li class="hb">
+            <a href="javascript:void()" class="header-menu"><span class="hidden">头部菜单</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-search"><span class="hidden">头部搜索</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-home">首页<span class="hidden">头部首页</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-home">更多美好<span class="hidden">头部更多美好</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-home">森果乐购<span class="hidden">头部森果乐购</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-home">潮流酷店<span class="hidden">头部潮流酷店</span></a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li class="hb">
+            <a href="javascript:void()" class="header-car"><span class="hidden">头部购物车</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-ring"><span class="hidden">头部消息</span></a>
+          </li>
+          <li class="hb">
+            <a href="javascript:void()" class="header-people"><span class="hidden">头部小人</span></a>
+          </li>
+        </ul>
+      </div>    
+    </div> 
+</div>
+
+<div class="waterfall-main">
+  <div id="waterfall">
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:550px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:550px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:550px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:450px; "></div>
+    <div class="vertical_group" style="height:550px; "></div>
+    <div class="vertical_group" style="height:150px; "></div>
+    <div class="vertical_group" style="height:250px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+    <div class="vertical_group" style="height:350px; "></div>
+  
+</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.js"></script>
+<script language="javascript">
+var cell_width = 248;
+function item_masonry()
+{ 
+	$('#waterfall').masonry({ 
+		itemSelector: '.vertical_group',
+		columnWidth:235,
+		gutterWidth:13
+	});
+}
+$(function(){
+	//顶部宽度自适应
+	var cell_num = 0;
+	var document_w = $(window).width();
+	if(document_w > 1200)
+	{
+		cell_num = Math.floor(document_w / cell_width);
+		document_w = cell_num * cell_width;
+		$('div.waterfall-main,div.Header-inner').width(document_w-13);
+		
+		
+//		$('div.top').css({'margin-left':'-(document_w-13)/2'});
+		
+//		var dif_w = document_w - 1200;
+//		$('.header_search_box1').width(850+dif_w);
+	}
+	$(window).resize(function(){  
+		var document_w = $(window).width();
+		if(document_w > 1200)
+		{
+			cell_num = Math.floor(document_w / cell_width);
+			document_w = cell_num * cell_width;
+			$('div.waterfall-main,div.Header-inner').width(document_w-13);
+//			var dif_w = document_w - 1200;
+//			$('.header_search_box1').width(850+dif_w);
+			$('#waterfall').masonry('reload');
+		}		
+    });
+	
+  	item_masonry();
+	$("#waterfall").infinitescroll({
+		navSelector  	: "#more",
+		nextSelector 	: "#more a",
+		itemSelector 	: ".vertical_group",
+		loading:{
+			img: "{tpl_path}images/my/loading.gif",
+			msgText: 'loading...',
+			finishedMsg: '<font style="color:#74b000">亲，刷到底啦！</font>',     		
+			finished: function(){
+				show_error_img($('img.nophoto'));
+				//$("#infscr-loading").hide();
+			}	
+		},errorCallback:function(){ 
+		
+		}		
+	},function(newElements){
+		var $newElems = $(newElements);
+		$('#waterfall').masonry('appended', $newElems, false);
+		$newElems.fadeIn();
+		show_error_img($('img.nophoto'));
+		item_masonry();
+		return;
+	});
+});
+</script> 
+
+</html>

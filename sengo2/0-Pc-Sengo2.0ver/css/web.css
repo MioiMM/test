@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-style:normal; list-style-type:none; border:none; font-size:100%; text-decoration:none;}
+body{ background:#ebeced; font-family:"微软雅黑"; overflow-y:scroll; font-size:13px;}
+input[type="text"].text, input[type="password"].text, textarea.text{
+	-webkit-appearance: none;
+    margin: 0;
+    padding: 5px 7px;
+    line-height: 19px;
+    height: 19px;
+    border: 1px solid #CACCCF;
+    border-radius: 2px;
+    font-size: 13px;
+    background: #FEFEFE;
+    color: #393D4D;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),0 1px 0 rgba(255, 255, 255, 0.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),0 1px 0 rgba(255, 255, 255, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),0 1px 0 rgba(255, 255, 255, 0.075);
+	}
+.left{ float:left;}
+.right{ float:right;}	
+.hidden{ display:block; text-indent:-1000em; height: 0; overflow: hidden; width: auto;}
+
+
+/*--顶部  开始--*/
+.Header{position:fixed; background:#383c49; top:0; width:100%; z-index:1;}
+@media (max-width: 1000px){
+	.Header{
+		min-width:980; 
+		position:relative;
+		}
+}
+.Header-inner{margin:auto; background:#383c49; height:47px; position:relative;}
+.Header-inner .logo,.Header-inner ul li a{ background:url(../images/header-icon.png) no-repeat center;}
+.Header-inner .logo{ width:80px; height:80px; background-position: -57px 0 !important; position:absolute; left:50%; margin:9px 0 0 -40px;}
+.Header-inner .logo a{ display:block; width:80px; height:80px; text-indent:-1000em;}
+.Header-inner .hb{line-height:47px; float:left; margin-right:25px;}
+.Header-inner .hb a{opacity:0.45; display:block; font-size:13px; color:#e9ebee;overflow:hidden;}
+.Header-inner .hb a:hover{ opacity:0.65;}
+.Header-inner .hb a:focus{ opacity:0.85;}
+.Header-inner .header-menu{ background-position:0 0 !important; width:14px; height:12px; margin-top:18px;}
+.Header-inner .header-search{ background-position:-24px 0 !important; width:16px; height:16px; margin-top:16px;}
+.Header-inner .header-car{ background-position:0 -17px !important; width:15px; height:15px; margin-top:16px;}
+.Header-inner .header-ring{ background-position:-24px -17px !important; width:15px; height:16px; margin-top:16px;}
+.Header-inner .header-people{ background-position:0 -34px !important; width:29px; height:15px; margin-top:16px;}
+
+
+
+
+/*--顶部  结束--*/
+
+
+
+
+
+.waterfall-main{ margin:auto; margin-top:60px; display:none;}
+.vertical_group{width:232px; margin-bottom:13px; vertical-align:top; border:solid 2px #e1e1e4; border-bottom:#d0d1d5 solid 2px !important; border-radius:3px;}
